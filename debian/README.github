@@ -20,7 +20,7 @@ How to build packages:
     # dpkg-buildpackage -sa -rfakeroot
     or:
     # sudo dpkg-buildpackage -sa
-    or whatsoeve
+    or whatsoever
 
 7. See and install new packages (open-axiom and open-axiom-databases at least):
     # ls -lh ../*.deb
