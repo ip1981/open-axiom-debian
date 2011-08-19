@@ -1,0 +1,22 @@
+Index: open-axiom.trunk/src/sman/sman.c
+===================================================================
+--- open-axiom.trunk.orig/src/sman/sman.c	2011-08-19 19:31:51.000000000 +0400
++++ open-axiom.trunk/src/sman/sman.c	2011-08-19 19:34:40.000000000 +0400
+@@ -450,7 +450,7 @@
+   const char* command = oa_concatenate_string(root_dir,HypertexProgram);
+ 
+   if (readablep(command) != 1) {
+-    fprintf(stderr, "Hypertex program not found.\n");
++    fprintf(stderr, "Hypertex program not found. Consider install `open-axiom-hypertex' package.\n");
+     return;
+   } 
+   if (PasteFile){
+@@ -481,7 +481,7 @@
+   if (readablep(command) == 1)
+     spawn_of_hell(command, DoItAgain);
+   else
+-    fprintf(stderr, "Graphics program not found.\n");
++    fprintf(stderr, "Graphics program not found. Consider install `open-axiom-graphics' package.\n");
+ }
+ 
+ /* Start the core executable session in a separate process, */
