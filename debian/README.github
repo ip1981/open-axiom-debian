@@ -17,7 +17,7 @@ How to build packages:
 6. Start building, either:
     # sudo ./debian/rules binary
     or:
-    # dpkg-buildpackage -sa -rfakeroor
+    # dpkg-buildpackage -sa -rfakeroot
     or:
     # sudo dpkg-buildpackage -sa
     or whatsoeve
