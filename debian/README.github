@@ -3,16 +3,17 @@ How to build packages:
 1. Get debian stuff from GitHub:
     # git clone https://github.com/ip1981/open-axiom-debian.git
 
-2. Change to created directory:
+2. Change to the created directory:
     # cd open-axiom-debian
 
 3. Get original sources (from OpenAxiom subversion repository):
     # ./debian/rules get-orig-source
 
-4. Unpack created tarball (* stands for version, e. g. 1.4.1+svn~2299):
+4. Unpack the created tarball (* stands for version, e. g. 1.4.1+svn~2299):
     # tar xf open-axiom_*.orig.tar.gz --strip-component=1
 
-5. Install build dependencies. Take a look at `debian/control'
+5. Install build dependencies. Take a look at `debian/control'.
+   For a while it just copied from Axiom with gcl replaced by sbcl.
 
 6. Start building, either:
     # sudo ./debian/rules binary
@@ -20,7 +21,8 @@ How to build packages:
     # dpkg-buildpackage -sa -rfakeroot
     or:
     # sudo dpkg-buildpackage -sa
-    or whatsoever
+    (latter two require *.orig.tar.gz in the upper directory:
+     # mv open-axiom_*.orig.tar.gz .. )
 
 7. See and install new packages (open-axiom and open-axiom-databases at least):
     # ls -lh ../*.deb
