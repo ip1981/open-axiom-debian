@@ -1,4 +1,4 @@
-open-axiom (1.4.1+svn~2299-1) UNRELEASED; urgency=low
+open-axiom (1.4.1+svn~2299-1) experimental; urgency=low
 
   * Initial release.
 
