@@ -10,7 +10,7 @@ Build-Depends: debhelper ( >= 8 ),
  texlive-latex-base, gawk, sharutils,
  ghostscript, gsfonts, libxmu-dev,
  libxaw7-dev, zlib1g-dev, texlive-pstricks
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 
 Package: open-axiom
 Architecture: any
