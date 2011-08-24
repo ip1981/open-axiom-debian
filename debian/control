@@ -17,7 +17,7 @@ Architecture: any
 Depends: ${shlibs:Depends}, open-axiom-databases (= ${source:Version}), ${misc:Depends}
 Recommends: open-axiom-source, open-axiom-graphics, open-axiom-hypertex
 Suggests: texmacs, open-axiom-tex, open-axiom-test, nowebm
-Description: The open scientific computation platform
+Description: open scientific computation platform
  OpenAxiom is an open source platform for symbolic, algebraic,
  and numerical computations. It offers an interactive environment,
  an expressive programming language, a compiler, a large set of mathematical
@@ -39,7 +39,7 @@ Description: The open scientific computation platform
 Package: open-axiom-source
 Architecture: all
 Depends: ${misc:Depends}
-Description: The open scientific computation platform: source files
+Description: open scientific computation platform: source files
  OpenAxiom is an open source platform for symbolic, algebraic,
  and numerical computations. It offers an interactive environment,
  an expressive programming language, a compiler, a large set of mathematical
@@ -61,7 +61,7 @@ Description: The open scientific computation platform: source files
 Package: open-axiom-test
 Architecture: all
 Depends: open-axiom (>= ${source:Version}), ${misc:Depends}
-Description: The open scientific computation platform: regression test inputs
+Description: open scientific computation platform: regression test inputs
  OpenAxiom is an open source platform for symbolic, algebraic,
  and numerical computations. It offers an interactive environment,
  an expressive programming language, a compiler, a large set of mathematical
@@ -82,7 +82,7 @@ Description: The open scientific computation platform: regression test inputs
 Package: open-axiom-databases
 Architecture: all
 Depends: ${misc:Depends}
-Description: The open scientific computation platform: generated text databases
+Description: open scientific computation platform: generated text databases
  OpenAxiom is an open source platform for symbolic, algebraic,
  and numerical computations. It offers an interactive environment,
  an expressive programming language, a compiler, a large set of mathematical
@@ -105,7 +105,7 @@ Description: The open scientific computation platform: generated text databases
 Package: open-axiom-tex
 Architecture: all
 Depends: texlive-latex-recommended, ${misc:Depends}
-Description: The open scientific computation platform: style file for TeX
+Description: open scientific computation platform: style file for TeX
  OpenAxiom is an open source platform for symbolic, algebraic,
  and numerical computations. It offers an interactive environment,
  an expressive programming language, a compiler, a large set of mathematical
@@ -127,7 +127,7 @@ Description: The open scientific computation platform: style file for TeX
 Package: open-axiom-graphics
 Architecture: any
 Depends: ${shlibs:Depends}, open-axiom (= ${binary:Version}), open-axiom-graphics-data (= ${source:Version}), ${misc:Depends}
-Description: The open scientific computation platform: graphics subsystem
+Description: open scientific computation platform: graphics subsystem
  OpenAxiom is an open source platform for symbolic, algebraic,
  and numerical computations. It offers an interactive environment,
  an expressive programming language, a compiler, a large set of mathematical
@@ -150,7 +150,7 @@ Description: The open scientific computation platform: graphics subsystem
 Package: open-axiom-graphics-data
 Architecture: all
 Depends: ${misc:Depends}
-Description: The open scientific computation platform: graphics subsystem
+Description: open scientific computation platform: graphics subsystem
  OpenAxiom is an open source platform for symbolic, algebraic,
  and numerical computations. It offers an interactive environment,
  an expressive programming language, a compiler, a large set of mathematical
@@ -172,7 +172,7 @@ Description: The open scientific computation platform: graphics subsystem
 Package: open-axiom-hypertex
 Architecture: any
 Depends: ${shlibs:Depends}, open-axiom (= ${binary:Version}), open-axiom-hypertex-data (= ${source:Version}), ${misc:Depends}
-Description: The open scientific computation platform: hypertex subsystem
+Description: open scientific computation platform: hypertex subsystem
  OpenAxiom is an open source platform for symbolic, algebraic,
  and numerical computations. It offers an interactive environment,
  an expressive programming language, a compiler, a large set of mathematical
@@ -195,7 +195,7 @@ Description: The open scientific computation platform: hypertex subsystem
 Package: open-axiom-hypertex-data
 Architecture: all
 Depends: ${misc:Depends}
-Description: The open scientific computation platform: hypertex subsystem
+Description: open scientific computation platform: hypertex subsystem
  OpenAxiom is an open source platform for symbolic, algebraic,
  and numerical computations. It offers an interactive environment,
  an expressive programming language, a compiler, a large set of mathematical
