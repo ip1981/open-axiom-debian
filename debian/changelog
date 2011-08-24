@@ -1,5 +1,5 @@
 open-axiom (1.4.1+svn~2299-1) experimental; urgency=low
 
-  * Initial release.
+  * Initial release. Closes: #639185
 
  -- Igor Pashev <pashev.igor@gmail.com>  Fri, 19 Aug 2011 12:56:22 +0400
