@@ -1,0 +1,13 @@
+Index: open-axiom-debian/src/driver/Makefile.in
+===================================================================
+--- open-axiom-debian.orig/src/driver/Makefile.in	2011-08-25 23:14:50.000000000 +0400
++++ open-axiom-debian/src/driver/Makefile.in	2011-08-25 23:15:10.000000000 +0400
+@@ -70,7 +70,7 @@
+ main.lo: open-axiom.h
+ 
+ open-axiom$(EXEEXT): $(open_axiom_objects)
+-	$(CXXLINK) -all-static -o $@ $(open_axiom_objects) $(open_axiom_LDADD)
++	$(CXXLINK) -o $@ $(open_axiom_objects) $(open_axiom_LDADD)
+ 
+ mostlyclean-local:
+ 	@rm -f $(open_axiom_objects)
