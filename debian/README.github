@@ -11,6 +11,8 @@ How to build packages:
 
 4. Unpack the created tarball (* stands for version, e. g. 1.4.1+svn~2299):
     # tar xf open-axiom_*.orig.tar.gz --strip-component=1
+   Remember to apply patches:
+    # QUILT_PATCHES=debian/patches quilt push -a
 
 5. Install build dependencies. Take a look at `debian/control'.
    For a while it just copied from Axiom with gcl replaced by sbcl.
