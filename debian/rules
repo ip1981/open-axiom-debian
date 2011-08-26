@@ -18,8 +18,10 @@ override_dh_auto_clean:
 override_dh_install:
 	dh_install --list-missing
 
+# AXIOMsys seems already stripped,
+# and dh_strip breaks it
 override_dh_strip:
-	# stripping breaks Open Axiom
+	dh_strip -X AXIOMsys
 
 clean build install binary binary-arch binary-indep:
 	dh $@ --builddir=$(BUILD)
