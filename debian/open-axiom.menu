@@ -4,4 +4,4 @@
     longtitle="The open scientific computation platform" \
     section="Applications/Science/Mathematics" \
     command="/usr/bin/open-axiom" \
-    icon="/usr/share/pixmaps/open-axiom.png"
+    icon="/usr/share/pixmaps/open-axiom.xpm"

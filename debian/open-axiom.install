@@ -18,4 +18,4 @@ usr/lib/open-axiom/bin/AXIOMsys
 
 usr/lib/open-axiom/lib/libopen-axiom-core.so
 
-debian/open-axiom.png /usr/share/pixmaps/
+debian/open-axiom.xpm /usr/share/pixmaps/
