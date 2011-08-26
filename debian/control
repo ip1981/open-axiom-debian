@@ -2,14 +2,12 @@ Source: open-axiom
 Section: math
 Priority: optional
 Maintainer: Igor Pashev <pashev.igor@gmail.com>
-Build-Depends: debhelper ( >= 8 ),
- sbcl ( >= 1.0.22 ), libgmp3-dev,
- libncurses5-dev, libreadline-dev,
- libx11-dev, libxt-dev, x11proto-core-dev,
- libxpm-dev, x11-common,
- texlive-latex-base, gawk, sharutils,
- ghostscript, gsfonts, libxmu-dev,
- libxaw7-dev, zlib1g-dev, texlive-pstricks
+Build-Depends:
+ debhelper ( >= 8 ),
+ sbcl ( >= 1.0.30 ),
+ libxpm-dev,
+#TODO: OA has some gui, need to know more
+# libqt4-dev ( >= 4.6 ),
 Standards-Version: 3.9.2
 
 Package: open-axiom
