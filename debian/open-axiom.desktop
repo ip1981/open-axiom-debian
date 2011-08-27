@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=OpenAxiom
+Type=Application
+Comment=Open scientific computation platform
+Comment[ru]=Универсальная система компьютерной алгебры
+Exec=open-axiom
+TryExec=open-axiom
+Icon=open-axiom
+Categories=Science;Education;Math;
+Terminal=true

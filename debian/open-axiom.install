@@ -1,13 +1,16 @@
 usr/bin/open-axiom
-usr/lib/open-axiom/lib/command.list
 usr/lib/open-axiom/lib/ex2ht
 usr/lib/open-axiom/algebra/*.fasl
 usr/lib/open-axiom/lib/session
 usr/lib/open-axiom/lib/spadbuf
 usr/lib/open-axiom/lib/spadclient
-usr/lib/open-axiom/lib/summary
-usr/lib/open-axiom/lib/command.list
+
+# For internal commands:
+# )copyright and )summary
 usr/lib/open-axiom/lib/copyright
+usr/lib/open-axiom/lib/summary
+
+usr/lib/open-axiom/lib/command.list
 
 usr/lib/open-axiom/doc
 
@@ -19,3 +22,4 @@ usr/lib/open-axiom/bin/AXIOMsys
 usr/lib/open-axiom/lib/libopen-axiom-core.so
 
 debian/open-axiom.xpm /usr/share/pixmaps/
+debian/open-axiom.desktop /usr/share/applications/
