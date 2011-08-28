@@ -6,6 +6,7 @@ Build-Depends:
  debhelper ( >= 8 ),
  sbcl ( >= 1.0.30 ),
  libxpm-dev,
+ libxt-dev,
  help2man,
 #TODO: OA has some gui, need to know more
 # libqt4-dev ( >= 4.6 ),
