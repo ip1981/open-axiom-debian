@@ -24,7 +24,7 @@ debian/open-axiom.1:
 
 # make clean does not clean properly
 # so building out of source
-BUILD = build-tree
+BUILD = $(CURDIR)/build-tree
 
 LDFLAGS = -Wl,--as-needed
 
@@ -33,6 +33,19 @@ override_dh_auto_configure:
 		--with-lisp=sbcl \
 		--with-x \
 		LDFLAGS="$(LDFLAGS)"
+
+# Remove shebangs and "compiled from ..." lines.
+# This makes lintian happy and prevents disclosure
+# of paths on build machine. E. g.:
+## !$(BUILD)/src/interp/interpsys --script
+## FASL
+#   compiled from "$(BUILD)/src/algebra/IDECOMP.NRLIB/code.lsp"
+#   using SBCL version 1.0.50.0.debian
+#
+override_dh_auto_install:
+	dh_auto_install
+	find debian/tmp -type f -name \*.fasl -exec \
+		sed -i '/^#!/ d; /compiled/ d' {} \;
 
 override_dh_auto_clean:
 	rm -rf $(BUILD)
