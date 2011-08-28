@@ -7,7 +7,7 @@ Index: open-axiom.trunk/src/sman/sman.c
  
    if (readablep(command) != 1) {
 -    fprintf(stderr, "Hypertex program not found.\n");
-+    fprintf(stderr, "Hypertex program not found. Consider install `open-axiom-hypertex' package.\n");
++    fprintf(stderr, "Hypertex program not found. Consider installing `open-axiom-hypertex' package.\n");
      return;
    } 
    if (PasteFile){
@@ -16,7 +16,7 @@ Index: open-axiom.trunk/src/sman/sman.c
      spawn_of_hell(command, DoItAgain);
    else
 -    fprintf(stderr, "Graphics program not found.\n");
-+    fprintf(stderr, "Graphics program not found. Consider install `open-axiom-graphics' package.\n");
++    fprintf(stderr, "Graphics program not found. Consider installing `open-axiom-graphics' package.\n");
  }
  
  /* Start the core executable session in a separate process, */
