@@ -24,12 +24,6 @@ Description: open scientific computation platform
  language, a compiler, a large set of mathematical libraries of interest to
  researchers and practitioners of computational sciences.
  .
- OpenAxiom strives to support ubiquitous, advanced, high quality
- open source computer algebra on major operating systems, in particular
- major Unix variants, GNU/Linux variants, Windows, and handheld devices.
- It aims at being the open source computer algebra system of choice
- for research, teaching, engineering, etc.
- .
  OpenAxiom is a descendent of the AXIOM computer algebra system as described by
  Richard Jenks and Robert Sutor in "AXIOM: The Scientific Computation System".
  That book is the base reference document for OpenAxiom.
@@ -45,12 +39,6 @@ Description: open scientific computation platform: source files
  computations. It offers an interactive environment, an expressive programming
  language, a compiler, a large set of mathematical libraries of interest to
  researchers and practitioners of computational sciences.
- .
- OpenAxiom strives to support ubiquitous, advanced, high quality
- open source computer algebra on major operating systems, in particular
- major Unix variants, GNU/Linux variants, Windows, and handheld devices.
- It aims at being the open source computer algebra system of choice
- for research, teaching, engineering, etc.
  .
  OpenAxiom is a descendent of the AXIOM computer algebra system as described by
  Richard Jenks and Robert Sutor in "AXIOM: The Scientific Computation System".
@@ -68,12 +56,6 @@ Description: open scientific computation platform: regression test inputs
  language, a compiler, a large set of mathematical libraries of interest to
  researchers and practitioners of computational sciences.
  .
- OpenAxiom strives to support ubiquitous, advanced, high quality
- open source computer algebra on major operating systems, in particular
- major Unix variants, GNU/Linux variants, Windows, and handheld devices.
- It aims at being the open source computer algebra system of choice
- for research, teaching, engineering, etc.
- .
  OpenAxiom is a descendent of the AXIOM computer algebra system as described by
  Richard Jenks and Robert Sutor in "AXIOM: The Scientific Computation System".
  That book is the base reference document for OpenAxiom.
@@ -88,12 +70,6 @@ Description: open scientific computation platform: generated text databases
  computations. It offers an interactive environment, an expressive programming
  language, a compiler, a large set of mathematical libraries of interest to
  researchers and practitioners of computational sciences.
- .
- OpenAxiom strives to support ubiquitous, advanced, high quality
- open source computer algebra on major operating systems, in particular
- major Unix variants, GNU/Linux variants, Windows, and handheld devices.
- It aims at being the open source computer algebra system of choice
- for research, teaching, engineering, etc.
  .
  OpenAxiom is a descendent of the AXIOM computer algebra system as described by
  Richard Jenks and Robert Sutor in "AXIOM: The Scientific Computation System".
@@ -111,12 +87,6 @@ Description: open scientific computation platform: style file for TeX
  computations. It offers an interactive environment, an expressive programming
  language, a compiler, a large set of mathematical libraries of interest to
  researchers and practitioners of computational sciences.
- .
- OpenAxiom strives to support ubiquitous, advanced, high quality
- open source computer algebra on major operating systems, in particular
- major Unix variants, GNU/Linux variants, Windows, and handheld devices.
- It aims at being the open source computer algebra system of choice
- for research, teaching, engineering, etc.
  .
  OpenAxiom is a descendent of the AXIOM computer algebra system as described by
  Richard Jenks and Robert Sutor in "AXIOM: The Scientific Computation System".
@@ -136,12 +106,6 @@ Description: open scientific computation platform: graphics subsystem
  language, a compiler, a large set of mathematical libraries of interest to
  researchers and practitioners of computational sciences.
  .
- OpenAxiom strives to support ubiquitous, advanced, high quality
- open source computer algebra on major operating systems, in particular
- major Unix variants, GNU/Linux variants, Windows, and handheld devices.
- It aims at being the open source computer algebra system of choice
- for research, teaching, engineering, etc.
- .
  OpenAxiom is a descendent of the AXIOM computer algebra system as described by
  Richard Jenks and Robert Sutor in "AXIOM: The Scientific Computation System".
  That book is the base reference document for OpenAxiom.
@@ -158,12 +122,6 @@ Description: open scientific computation platform: graphics subsystem
  computations. It offers an interactive environment, an expressive programming
  language, a compiler, a large set of mathematical libraries of interest to
  researchers and practitioners of computational sciences.
- .
- OpenAxiom strives to support ubiquitous, advanced, high quality
- open source computer algebra on major operating systems, in particular
- major Unix variants, GNU/Linux variants, Windows, and handheld devices.
- It aims at being the open source computer algebra system of choice
- for research, teaching, engineering, etc.
  .
  OpenAxiom is a descendent of the AXIOM computer algebra system as described by
  Richard Jenks and Robert Sutor in "AXIOM: The Scientific Computation System".
@@ -183,12 +141,6 @@ Description: open scientific computation platform: hypertex subsystem
  language, a compiler, a large set of mathematical libraries of interest to
  researchers and practitioners of computational sciences.
  .
- OpenAxiom strives to support ubiquitous, advanced, high quality
- open source computer algebra on major operating systems, in particular
- major Unix variants, GNU/Linux variants, Windows, and handheld devices.
- It aims at being the open source computer algebra system of choice
- for research, teaching, engineering, etc.
- .
  OpenAxiom is a descendent of the AXIOM computer algebra system as described by
  Richard Jenks and Robert Sutor in "AXIOM: The Scientific Computation System".
  That book is the base reference document for OpenAxiom.
@@ -205,12 +157,6 @@ Description: open scientific computation platform: hypertex subsystem
  computations. It offers an interactive environment, an expressive programming
  language, a compiler, a large set of mathematical libraries of interest to
  researchers and practitioners of computational sciences.
- .
- OpenAxiom strives to support ubiquitous, advanced, high quality
- open source computer algebra on major operating systems, in particular
- major Unix variants, GNU/Linux variants, Windows, and handheld devices.
- It aims at being the open source computer algebra system of choice
- for research, teaching, engineering, etc.
  .
  OpenAxiom is a descendent of the AXIOM computer algebra system as described by
  Richard Jenks and Robert Sutor in "AXIOM: The Scientific Computation System".
