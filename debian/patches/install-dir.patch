@@ -1,7 +1,7 @@
-Index: open-axiom.trunk/configure
+Index: b/configure
 ===================================================================
---- open-axiom.trunk.orig/configure	2011-07-13 15:42:04.000000000 +0400
-+++ open-axiom.trunk/configure	2011-08-15 00:23:54.000000000 +0400
+--- a/configure	2011-08-29 14:20:51.000000000 +0400
++++ b/configure	2011-08-29 14:21:04.000000000 +0400
 @@ -5615,7 +5615,7 @@
  
  
@@ -11,10 +11,10 @@ Index: open-axiom.trunk/configure
  
  
  if test $build != $target; then
-Index: open-axiom.trunk/configure.ac
+Index: b/configure.ac
 ===================================================================
---- open-axiom.trunk.orig/configure.ac	2011-07-13 15:42:04.000000000 +0400
-+++ open-axiom.trunk/configure.ac	2011-08-15 00:23:54.000000000 +0400
+--- a/configure.ac	2011-08-29 14:20:51.000000000 +0400
++++ b/configure.ac	2011-08-29 14:21:04.000000000 +0400
 @@ -55,7 +55,7 @@
  AC_CONFIG_SRCDIR(src/Makefile.in)
  
