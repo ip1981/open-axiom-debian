@@ -15,7 +15,7 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
  open-axiom-databases (= ${source:Version}),
 Recommends: open-axiom-source, open-axiom-graphics, open-axiom-hypertex
-Suggests: texmacs, open-axiom-tex, open-axiom-test, nowebm
+Suggests: texmacs, open-axiom-tex, open-axiom-test
 Description: open scientific computation platform
  OpenAxiom is an open source platform for symbolic, algebraic, and numerical
  computations. It offers an interactive environment, an expressive programming
