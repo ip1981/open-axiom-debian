@@ -8,8 +8,6 @@ Build-Depends:
  libxpm-dev,
  libxt-dev,
  help2man,
-#TODO: OA has some gui, need to know more
-# libqt4-dev ( >= 4.6 ),
 Standards-Version: 3.9.2
 
 Package: open-axiom
