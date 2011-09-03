@@ -1,0 +1,13 @@
+There is a target in "debian/rules" to fetch original
+source tarball for OpenAxiom: get-orig-source.
+
+It fetches sources from SVN repository on SourceForge,
+the SVN revision should be specified in version in "debian/changelog".
+
+
+For the first release (1.4.1+svn~2299+ds-1) these files are removed
+from original tarball (that's why +ds):
+
+./contrib (due to lisences mess)
+./src/include/xpm.h (system header is used;
+                  this file will be removed in upstream too)

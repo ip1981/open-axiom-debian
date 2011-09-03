@@ -1,2 +1,6 @@
-OpenAxiom has some GUI support with Qt >= 4.6
-It should be enabled eventually.
+1. OpenAxiom has some GUI support with Qt >= 4.6
+   It should be enabled eventually.
+
+2. There is TeXmacs support in "contrib/texmacs".
+   Sometime it sould be tested and packaged.
+
