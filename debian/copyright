@@ -1,5 +1,5 @@
 This package was debianized by Igor Pashev <pashev.igor@gmail.com>
-on Sun, 12 Jun 2011 21:14:00 +0400.
+on Sat, 03 Sep 2011 03:19:50 +0400.
 
 It was downloaded from (SVN) https://open-axiom.svn.sf.net/svnroot/open-axiom
 
@@ -8,7 +8,7 @@ Upstream Authors: Gabriel Dos Reis <gdr@cs.tamu.edu>, et.al.
 
 
 Files: debian/*
-Copyright: WTFPL-2
+License: WTFPL-2
 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
                     Version 2, December 2004 
@@ -23,6 +23,7 @@ Copyright: WTFPL-2
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
 
   0. You just DO WHAT THE FUCK YOU WANT TO. 
+
 
 
 

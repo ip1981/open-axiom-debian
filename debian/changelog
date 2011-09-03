@@ -1,5 +1,5 @@
-open-axiom (1.4.1+svn~2299-1) unstable; urgency=low
+open-axiom (1.4.1+svn~2299+ds-1) unstable; urgency=low
 
   * Initial release. Closes: #639185
 
- -- Igor Pashev <pashev.igor@gmail.com>  Mon, 29 Aug 2011 00:56:39 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Sat, 03 Sep 2011 03:19:50 +0400

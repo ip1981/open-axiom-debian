@@ -11,7 +11,11 @@ get-orig-source:
 	mkdir get-orig-source
 	svn export -r $(SVN_REVISION) $(SVN_REPO) \
 	get-orig-source/$(PACKAGE)-$(SRC_VERSION).orig
-	GZIP='--best --no-name' tar czf $(TARBALL) -C get-orig-source $(PACKAGE)-$(SRC_VERSION).orig
+	GZIP='--best --no-name' \
+		 tar czf $(TARBALL) -C get-orig-source \
+		 --exclude contrib \
+		 --exclude src/include/xpm.h \
+		 $(PACKAGE)-$(SRC_VERSION).orig
 	rm -rf get-orig-source
 	echo "  "$(TARBALL)" created; move it to the right destination to build the package"
 
