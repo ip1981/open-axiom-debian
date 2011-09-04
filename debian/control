@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Igor Pashev <pashev.igor@gmail.com>
 Build-Depends:
  debhelper ( >= 8 ),
- sbcl ( >= 1.0.30 ),
+ sbcl ( >= 1:1.0.30 ),
  libxpm-dev,
  libxt-dev,
  help2man,
