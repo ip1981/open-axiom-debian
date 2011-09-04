@@ -71,6 +71,6 @@ override_dh_installdocs:
 	dh_installdocs -p open-axiom-hypertex --link-doc=open-axiom
 	dh_installdocs --remaining-packages
 
-clean build install binary binary-arch binary-indep:
+clean build build-arch build-indep install binary binary-arch binary-indep:
 	dh $@ --builddir=$(BUILD)
 
