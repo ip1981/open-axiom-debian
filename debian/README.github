@@ -15,7 +15,6 @@ How to build packages:
     # QUILT_PATCHES=debian/patches quilt push -a
 
 5. Install build dependencies. Take a look at `debian/control'.
-   For a while it just copied from Axiom with gcl replaced by sbcl.
 
 6. Start building, either:
     # sudo ./debian/rules binary
