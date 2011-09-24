@@ -9,6 +9,9 @@ Build-Depends:
  libxt-dev,
  help2man,
 Standards-Version: 3.9.2
+Vcs-Git: http://git.debian.org/git/pkg-open-axiom/pkg-open-axiom.git
+Vcs-Browser: http://git.debian.org/?p=pkg-open-axiom/pkg-open-axiom.git
+Homepage: http://www.open-axiom.org/
 
 Package: open-axiom
 Architecture: any
