@@ -3,7 +3,7 @@
 DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
 
 # List of archs currently having SBCL
-ifneq ($(filter $(DEB_HOST_ARCH), i386 amd64 freebsd-amd64),)
+ifneq ($(filter $(DEB_HOST_ARCH), i386 amd64 kfreebsd-amd64),)
 LISP := sbcl
 else
 LISP := clisp
