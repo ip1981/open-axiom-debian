@@ -1,5 +1,15 @@
 #!/usr/bin/make -f
 
+DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
+
+# List of archs currently having SBCL
+ifneq ($(filter $(DEB_HOST_ARCH), i386 amd64 freebsd-amd64),)
+LISP := sbcl
+else
+LISP := clisp
+endif
+
+
 PACKAGE = open-axiom
 SVN_REPO = https://open-axiom.svn.sf.net/svnroot/open-axiom/trunk
 SRC_VERSION  := $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(\([0-9]\+\):\)\?\(.*\)-.*/\3/p')
@@ -13,8 +23,6 @@ get-orig-source:
 	get-orig-source/$(PACKAGE)-$(SRC_VERSION).orig
 	GZIP='--best --no-name' \
 		 tar czf $(TARBALL) -C get-orig-source \
-		 --exclude contrib \
-		 --exclude src/include/xpm.h \
 		 $(PACKAGE)-$(SRC_VERSION).orig
 	rm -rf get-orig-source
 	echo "  "$(TARBALL)" created; move it to the right destination to build the package"
@@ -34,7 +42,7 @@ LDFLAGS = -Wl,--as-needed
 
 override_dh_auto_configure:
 	dh_auto_configure -B $(BUILD) -- \
-		--with-lisp=sbcl \
+		--with-lisp=$(LISP) \
 		--with-x \
 		LDFLAGS="$(LDFLAGS)"
 
