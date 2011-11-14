@@ -50,6 +50,13 @@ Copyright: 2007-2011, Dan Martens <dan_martens@lycos.com>
  Alfredo Portes <alfredo.portes@gmail.com>
 License: Modified BSD License
 
+Comment:
+ On Debian systems the 'GNU General Public License' version 3 is located
+ in '/usr/share/common-licenses/GPL-3'.
+ .
+ You should have received a copy of the 'GNU General Public License'
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 
 OpenAxiom is derived from AXIOM, which was released as open source
 under the BSD-style license.  All changes to OpenAxiom have been
