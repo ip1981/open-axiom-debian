@@ -6,7 +6,7 @@ DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
 ifneq ($(filter $(DEB_HOST_ARCH), i386 amd64 kfreebsd-amd64),)
 LISP := sbcl
 else
-LISP := clisp
+LISP := gcl
 endif
 
 

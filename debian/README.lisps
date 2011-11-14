@@ -1,0 +1,11 @@
+Lisps to build OpenAxiom:
+SBCL, GCL, CLisp, ECL, CCL
+
+SBCL is preferable, then GCL, then CLisp and so on.
+
+As of Wheezy, SBCL is present only for:
+i386, amd64, kfreebsd-amd64.
+
+On other arch GCL should be used.
+To build with GCL libncurses-dev and libreadline-dev are required.
+

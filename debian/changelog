@@ -4,9 +4,9 @@ open-axiom (1.4.1+svn~2466-1) unstable; urgency=low
   * Include directory 'contrib' in sources
   * Removed patch for system xpm.h (fixed in upstream)
   * Use SBCL where available (currently i386, amd64, kfreebsd-amd64)
-    and CLISP otherwheres
+    and GCL otherwheres
 
- -- Igor Pashev <pashev.igor@gmail.com>  Sun, 13 Nov 2011 20:35:02 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Mon, 14 Nov 2011 04:12:38 +0400
 
 open-axiom (1.4.1+svn~2299+ds-1) unstable; urgency=low
 
