@@ -1,4 +1,4 @@
-open-axiom (1.4.1+svn~2466-1) unstable; urgency=low
+open-axiom (1.4.1+svn~2470-1) unstable; urgency=low
 
   * New upstream version
   * Include directory 'contrib' in sources

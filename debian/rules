@@ -24,8 +24,8 @@ get-orig-source:
 	GZIP='--best --no-name' \
 		 tar czf $(TARBALL) -C get-orig-source \
 		 $(PACKAGE)-$(SRC_VERSION).orig
-	rm -rf get-orig-source
-	echo "  "$(TARBALL)" created; move it to the right destination to build the package"
+	@rm -rf get-orig-source
+	@echo "  "$(TARBALL)" created; move it to the right destination to build the package"
 
 debian/open-axiom.1:
 	help2man --no-info \
@@ -40,10 +40,13 @@ BUILD = $(CURDIR)/build-tree
 
 LDFLAGS = -Wl,--as-needed
 
+
+# --disable-gcl is for included GCL:
 override_dh_auto_configure:
 	dh_auto_configure -B $(BUILD) -- \
 		--with-lisp=$(LISP) \
 		--with-x \
+		--disable-gcl \
 		LDFLAGS="$(LDFLAGS)"
 
 # Remove shebangs and "compiled from ..." lines.
@@ -63,6 +66,9 @@ override_dh_auto_clean:
 	rm -rf $(BUILD)
 
 override_dh_install:
+ifeq ($(LISP), sbcl)
+	dh_install -p open-axiom usr/lib/open-axiom/lib/libopen-axiom-core.so
+endif
 	dh_install --list-missing
 
 override_dh_installman: debian/open-axiom.1

@@ -1,6 +1,11 @@
 usr/bin/open-axiom
 usr/lib/open-axiom/lib/ex2ht
-usr/lib/open-axiom/algebra/*.fasl
+
+# *.o for GCL
+# *.fasl for SBCL
+# it's a kind of hack
+usr/lib/open-axiom/algebra/*.{o,fasl}
+
 usr/lib/open-axiom/lib/session
 usr/lib/open-axiom/lib/spadbuf
 usr/lib/open-axiom/lib/spadclient
@@ -19,7 +24,9 @@ usr/lib/open-axiom/bin/clef
 usr/lib/open-axiom/bin/asq
 usr/lib/open-axiom/bin/AXIOMsys
 
-usr/lib/open-axiom/lib/libopen-axiom-core.so
+# GCL does not use shared libs
+# for SBCL we put this lib in debian/rules
+#usr/lib/open-axiom/lib/libopen-axiom-core.so
 
 debian/open-axiom.xpm /usr/share/pixmaps/
 debian/open-axiom.desktop /usr/share/applications/
