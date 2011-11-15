@@ -67,12 +67,10 @@ override_dh_auto_clean:
 
 override_dh_install:
 ifeq ($(LISP), sbcl)
-	dh_install -p open-axiom \
-		usr/lib/open-axiom/lib/libopen-axiom-core.so \
-		usr/lib/open-axiom/algebra/*.fasl
+	dh_install -p open-axiom  usr/lib/open-axiom/lib/libopen-axiom-core.so
+	dh_install -p open-axiom  usr/lib/open-axiom/algebra/*.fasl
 else
-	dh_install -p open-axiom \
-		usr/lib/open-axiom/algebra/*.o
+	dh_install -p open-axiom  usr/lib/open-axiom/algebra/*.o
 endif
 	dh_install --list-missing
 
