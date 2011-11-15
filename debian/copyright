@@ -25,15 +25,22 @@ License: WTFPL-2
   0. You just DO WHAT THE FUCK YOU WANT TO. 
 
 
-Files: contrib/texmacs/src/tm_openaxiom.c
-Copyright: 2004, Bill Page <bill.page1@sympatico.ca>
- 1999, Andrey Grozin
-License: GPL-3
+
+Files: contrib/windows-installer/*
+Copyright: 2007-2011, Dan Martens <dan_martens@lycos.com>
+ Bill Page <bill.page1@sympatico.ca>
+ Alfredo Portes <alfredo.portes@gmail.com>
+License: Modified BSD License
 
 Files: contrib/texmacs/src/texbreaker.c
  contrib/texmacs/src/useproto.h
 Copyright: 1991, Robert S. Sutor
 License: Modified BSD License
+
+Files: contrib/texmacs/src/tm_openaxiom.c
+Copyright: 2004, Bill Page <bill.page1@sympatico.ca>
+ 1999, Andrey Grozin
+License: GPL-3
 
 Files: contrib/texmacs/progs/init-openaxiom.scm
  contrib/texmacs/progs/openaxiom-input.scm
@@ -44,12 +51,6 @@ Files: contrib/texmacs/packages/session/openaxiom.ts
 Copyright: 2002-2004, Joris van der Hoeven
 License: GPL-3
 
-Files: contrib/windows-installer/*
-Copyright: 2007-2011, Dan Martens <dan_martens@lycos.com>
- Bill Page <bill.page1@sympatico.ca>
- Alfredo Portes <alfredo.portes@gmail.com>
-License: Modified BSD License
-
 Comment:
  On Debian systems the 'GNU General Public License' version 3 is located
  in '/usr/share/common-licenses/GPL-3'.
@@ -58,40 +59,42 @@ Comment:
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-OpenAxiom is derived from AXIOM, which was released as open source
-under the BSD-style license.  All changes to OpenAxiom have been
-released open source under the BSD-style license reproduced below.
 
-Portions Copyright (C) 2007-2011, Gabriel Dos Reis
-Portions Copyright (C) 2003-2007, The Axiom Team
-Portions Copyright (C) 1991-2002, The Numerical Algorithms Group Ltd.
-All rights reserved.
+License: 
+ OpenAxiom is derived from AXIOM, which was released as open source
+ under the BSD-style license.  All changes to OpenAxiom have been
+ released open source under the BSD-style license reproduced below.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
+ Portions Copyright (C) 2007-2011, Gabriel Dos Reis
+ Portions Copyright (C) 2003-2007, The Axiom Team
+ Portions Copyright (C) 1991-2002, The Numerical Algorithms Group Ltd.
+ All rights reserved.
 
-- Redistributions of source code must retain the above copyright
-notice, this list of conditions and the following disclaimer.
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
 
-- Redistributions in binary form must reproduce the above copyright
-notice, this list of conditions and the following disclaimer in
-the documentation and/or other materials provided with the
-distribution.
+ - Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
 
-- Neither the name of The Numerical Algorithms Group Ltd. nor the
-names of its contributors may be used to endorse or promote products
-derived from this software without specific prior written permission.
+ - Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in
+ the documentation and/or other materials provided with the
+ distribution.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
-IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
-TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
-PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
-OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
-EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
-PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
-PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-      
+ - Neither the name of The Numerical Algorithms Group Ltd. nor the
+ names of its contributors may be used to endorse or promote products
+ derived from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+ IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+ PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+ OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
