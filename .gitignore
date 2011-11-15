@@ -1,0 +1,5 @@
+debian/*.debhelper.log
+debian/*.substvars
+debian/*.*.debhelper
+debian/tmp
+.pc
