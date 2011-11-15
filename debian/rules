@@ -72,13 +72,12 @@ ifeq ($(LISP), sbcl)
 else
 	dh_install -p open-axiom  usr/lib/open-axiom/algebra/*.o
 endif
-	dh_install --list-missing
+	dh_install
 
 override_dh_installman: debian/open-axiom.1
 	dh_installman
 
-# AXIOMsys seems already stripped,
-# and dh_strip breaks it
+# AXIOMsys seems already stripped, and dh_strip breaks it:
 override_dh_strip:
 	dh_strip -X AXIOMsys
 
