@@ -3,7 +3,10 @@
 DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
 
 # List of archs currently having SBCL
-ifneq ($(filter $(DEB_HOST_ARCH), i386 amd64 kfreebsd-amd64),)
+# Keep build-deb on sbcl in one line: sbcl (...) [...],
+HAVE_SBCL := $(shell grep sbcl debian/control | sed -r 's,.*\[(.+)\].*,\1,')
+
+ifneq ($(filter $(DEB_HOST_ARCH), $(HAVE_SBCL)),)
 LISP := sbcl
 else
 LISP := gcl
