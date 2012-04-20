@@ -11,7 +11,7 @@ Build-Depends:
  libxpm-dev,
  libxt-dev,
  help2man,
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Vcs-Git: http://git.debian.org/git/pkg-open-axiom/pkg-open-axiom.git
 Vcs-Browser: http://git.debian.org/?p=pkg-open-axiom/pkg-open-axiom.git
 Homepage: http://www.open-axiom.org/
@@ -121,7 +121,7 @@ Description: open scientific computation platform: graphics subsystem
 Package: open-axiom-graphics-data
 Architecture: all
 Depends: ${misc:Depends}
-Description: open scientific computation platform: graphics subsystem
+Description: open scientific computation platform: graphics subsystem data
  OpenAxiom is an open source platform for symbolic, algebraic, and numerical
  computations. It offers an interactive environment, an expressive programming
  language, a compiler, a large set of mathematical libraries of interest to
@@ -156,7 +156,7 @@ Description: open scientific computation platform: hypertex subsystem
 Package: open-axiom-hypertex-data
 Architecture: all
 Depends: ${misc:Depends}
-Description: open scientific computation platform: hypertex subsystem
+Description: open scientific computation platform: hypertex subsystem data
  OpenAxiom is an open source platform for symbolic, algebraic, and numerical
  computations. It offers an interactive environment, an expressive programming
  language, a compiler, a large set of mathematical libraries of interest to
