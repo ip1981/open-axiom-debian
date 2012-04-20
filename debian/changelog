@@ -5,8 +5,9 @@ open-axiom (1.4.1+svn~2626-1) unstable; urgency=low
   * Removed patch for system xpm.h (fixed in upstream)
   * Use SBCL where available (currently i386, amd64, kfreebsd-amd64)
     and GCL otherwheres (Closes: #648877)
+  * Bump standards version 3.9.2 → 3.9.3, no changes
 
- -- Igor Pashev <pashev.igor@gmail.com>  Sat, 21 Apr 2012 00:24:54 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Sat, 21 Apr 2012 01:48:13 +0400
 
 open-axiom (1.4.1+svn~2299+ds-1) unstable; urgency=low
 
