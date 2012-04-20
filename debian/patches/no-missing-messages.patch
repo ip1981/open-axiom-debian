@@ -1,7 +1,7 @@
 Index: b/src/sman/sman.c
 ===================================================================
---- a/src/sman/sman.c	2011-12-05 02:49:30.000000000 +0400
-+++ b/src/sman/sman.c	2011-12-05 02:49:36.000000000 +0400
+--- a/src/sman/sman.c	2012-04-21 00:28:55.000000000 +0400
++++ b/src/sman/sman.c	2012-04-21 00:29:02.000000000 +0400
 @@ -450,7 +450,6 @@
    const char* command = oa_concatenate_string(root_dir,HypertexProgram);
  

@@ -1,4 +1,4 @@
-open-axiom (1.4.1+svn~2526-1) unstable; urgency=low
+open-axiom (1.4.1+svn~2626-1) unstable; urgency=low
 
   * New upstream version
   * Include directory 'contrib' in sources
@@ -6,7 +6,7 @@ open-axiom (1.4.1+svn~2526-1) unstable; urgency=low
   * Use SBCL where available (currently i386, amd64, kfreebsd-amd64)
     and GCL otherwheres (Closes: #648877)
 
- -- Igor Pashev <pashev.igor@gmail.com>  Mon, 05 Dec 2011 02:39:43 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Sat, 21 Apr 2012 00:24:54 +0400
 
 open-axiom (1.4.1+svn~2299+ds-1) unstable; urgency=low
 
