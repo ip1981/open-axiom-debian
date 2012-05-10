@@ -1,5 +1,10 @@
 #!/usr/bin/make -f
 
+# make clean does not clean properly, so building out of source
+BUILD = $(CURDIR)/build-tree
+
+LDFLAGS = -Wl,--as-needed
+
 DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
 
 # List of archs currently having SBCL
@@ -30,66 +35,87 @@ get-orig-source:
 	@rm -rf get-orig-source
 	@echo "  "$(TARBALL)" created; move it to the right destination to build the package"
 
-debian/open-axiom.1:
+debian/open-axiom.1: build-stamp
 	help2man --no-info \
 		--version-string='$(SRC_VERSION)' \
 		-m 'The open scientific computation platform' \
 		-n 'open source platform for symbolic, algebraic, and numerical computations' \
 		$(BUILD)/src/driver/open-axiom > $@
 
-# make clean does not clean properly
-# so building out of source
-BUILD = $(CURDIR)/build-tree
-
-LDFLAGS = -Wl,--as-needed
-
-
 # --disable-gcl is for included GCL:
-override_dh_auto_configure:
+configure-stamp:
+	dh_testdir
 	dh_auto_configure -B $(BUILD) -- \
 		--with-lisp=$(LISP) \
 		--with-x \
 		--disable-gcl \
 		LDFLAGS="$(LDFLAGS)"
+	touch $@
 
-# Remove shebangs and "compiled from ..." lines.
-# This makes lintian happy and prevents disclosure
-# of paths on build machine. E. g.:
-## !$(BUILD)/src/interp/interpsys --script
-## FASL
-#   compiled from "$(BUILD)/src/algebra/IDECOMP.NRLIB/code.lsp"
-#   using SBCL version 1.0.50.0.debian
-#
-override_dh_auto_install:
-	dh_auto_install
-	find debian/tmp -type f -name \*.fasl -exec \
-		sed -i '/^#!/ d; /compiled/ d' {} \;
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
+build-stamp: configure-stamp
+	dh_testdir
+	cd $(BUILD) && $(MAKE)
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	cd $(BUILD) && $(MAKE) check
+endif
+	touch $@
 
-override_dh_auto_clean:
-	rm -rf $(BUILD)
+install: install-stamp
+install-stamp: build-stamp
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_auto_install -B $(BUILD)
+	touch $@
 
-override_dh_install:
+binary: binary-arch binary-indep
+binary-indep: install
+binary-arch: install debian/open-axiom.1
 ifeq ($(LISP), sbcl)
 	dh_install -p open-axiom  usr/lib/open-axiom/lib/libopen-axiom-core.so
 	dh_install -p open-axiom  usr/lib/open-axiom/algebra/*.fasl
+	# Remove shebangs and "compiled from ..." lines.
+	# This makes lintian happy and prevents disclosure
+	# of paths on build machine. E. g.:
+	## !$(BUILD)/src/interp/interpsys --script
+	## FASL
+	#   compiled from "$(BUILD)/src/algebra/IDECOMP.NRLIB/code.lsp"
+	#   using SBCL version 1.0.50.0.debian
+	find debian/open-axiom -type f -name \*.fasl -exec \
+		sed -i '/^#!/ d; /compiled/ d' {} \;
 else
 	dh_install -p open-axiom  usr/lib/open-axiom/algebra/*.o
 endif
 	dh_install
-
-override_dh_installman: debian/open-axiom.1
 	dh_installman
-
-# AXIOMsys seems already stripped, and dh_strip breaks it:
-override_dh_strip:
-	dh_strip -X AXIOMsys
-
-override_dh_installdocs:
 	dh_installdocs -p open-axiom-graphics --link-doc=open-axiom
 	dh_installdocs -p open-axiom-test     --link-doc=open-axiom
 	dh_installdocs -p open-axiom-hypertex --link-doc=open-axiom
 	dh_installdocs --remaining-packages
+	dh_installexamples
+	dh_installchangelogs
+	dh_installmenu
+	dh_link
 
-clean build build-arch build-indep install binary binary-arch binary-indep:
-	dh $@ --builddir=$(BUILD)
+# AXIOMsys seems already stripped, and dh_strip breaks it:
+	dh_strip -X AXIOMsys
+
+	dh_compress
+	dh_fixperms
+	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -rf $(BUILD)
+	rm -f install-stamp build-stamp configure-stamp
+	dh_clean
 
