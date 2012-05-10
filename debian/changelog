@@ -6,8 +6,10 @@ open-axiom (1.4.1+svn~2626-1) unstable; urgency=low
   * Use SBCL where available (currently i386, amd64, kfreebsd-amd64)
     and GCL otherwheres (Closes: #648877)
   * Bump standards version 3.9.2 → 3.9.3, no changes
+  * Rewrote debian/rules (too many overrides)
+  * Removed Encoding key from desktop file
 
- -- Igor Pashev <pashev.igor@gmail.com>  Sat, 21 Apr 2012 01:48:13 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Thu, 10 May 2012 16:23:17 +0400
 
 open-axiom (1.4.1+svn~2299+ds-1) unstable; urgency=low
 
