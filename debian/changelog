@@ -1,3 +1,9 @@
+open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
+
+  * Added libgmp-dev build-dep for GCL
+
+ -- Igor Pashev <pashev.igor@gmail.com>  Wed, 16 May 2012 15:22:53 +0400
+
 open-axiom (1.4.1+svn~2626-1) unstable; urgency=low
 
   * New upstream version
