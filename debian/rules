@@ -11,27 +11,27 @@ DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
 # Keep build-deb on sbcl in one line: sbcl (...) [...],
 HAVE_SBCL := $(shell grep sbcl debian/control | sed -r 's,.*\[(.+)\].*,\1,')
 
-ifneq ($(filter $(DEB_HOST_ARCH), $(HAVE_SBCL)),)
+ifneq (,$(filter $(DEB_HOST_ARCH),$(HAVE_SBCL)))
 LISP := sbcl
 else
 LISP := gcl
 endif
 
 
-PACKAGE = open-axiom
-SVN_REPO = https://open-axiom.svn.sf.net/svnroot/open-axiom/trunk
-SRC_VERSION  := $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(\([0-9]\+\):\)\?\(.*\)-.*/\3/p')
-SVN_REVISION := $(shell echo $(SRC_VERSION) | awk -F"+" '{ print $$2 }' | sed 's/svn~//' )
-TARBALL       = $(PACKAGE)_$(SRC_VERSION).orig.tar.gz
+PACKAGE      := open-axiom
+SVN_REPO     := svn://svn.code.sf.net/p/open-axiom/code/trunk
+SRC_VERSION  := $(shell dpkg-parsechangelog | awk '/^Version:/ {sub(/-[^-]*/, "", $$2); print $$2}')
+SVN_REVISION := $(shell echo $(SRC_VERSION) | sed -r 's,.+svn([0-9]+),\1,')
+TARBALL      := $(PACKAGE)_$(SRC_VERSION).orig.tar.gz
 .PHONY: get-orig-source
 get-orig-source:
 	rm -rf get-orig-source $(TARBALL)
 	mkdir get-orig-source
 	svn export -r $(SVN_REVISION) $(SVN_REPO) \
-	get-orig-source/$(PACKAGE)-$(SRC_VERSION).orig
+	get-orig-source/$(PACKAGE)-$(SRC_VERSION)
 	GZIP='--best --no-name' \
 		 tar czf $(TARBALL) -C get-orig-source \
-		 $(PACKAGE)-$(SRC_VERSION).orig
+		 $(PACKAGE)-$(SRC_VERSION)
 	@rm -rf get-orig-source
 	@echo "  "$(TARBALL)" created; move it to the right destination to build the package"
 
