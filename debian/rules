@@ -22,15 +22,14 @@ PACKAGE      := open-axiom
 SVN_REPO     := svn://svn.code.sf.net/p/open-axiom/code/trunk
 SRC_VERSION  := $(shell dpkg-parsechangelog | awk '/^Version:/ {sub(/-[^-]*/, "", $$2); print $$2}')
 SVN_REVISION := $(shell echo $(SRC_VERSION) | sed -r 's,.+svn([0-9]+),\1,')
-TARBALL      := $(PACKAGE)_$(SRC_VERSION).orig.tar.gz
+TARBALL      := $(PACKAGE)_$(SRC_VERSION).orig.tar.xz
 .PHONY: get-orig-source
 get-orig-source:
 	rm -rf get-orig-source $(TARBALL)
 	mkdir get-orig-source
 	svn export -r $(SVN_REVISION) $(SVN_REPO) \
 	get-orig-source/$(PACKAGE)-$(SRC_VERSION)
-	GZIP='--best --no-name' \
-		 tar czf $(TARBALL) -C get-orig-source \
+	 tar cJf $(TARBALL) -C get-orig-source \
 		 $(PACKAGE)-$(SRC_VERSION)
 	@rm -rf get-orig-source
 	@echo "  "$(TARBALL)" created; move it to the right destination to build the package"
@@ -110,7 +109,7 @@ endif
 	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
-	dh_builddeb
+	dh_builddeb -- -Zxz
 
 clean:
 	dh_testdir

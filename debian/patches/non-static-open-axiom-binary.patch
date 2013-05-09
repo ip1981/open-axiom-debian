@@ -1,7 +1,7 @@
 Index: b/src/driver/Makefile.in
 ===================================================================
---- a/src/driver/Makefile.in	2013-04-03 19:12:46.000000000 +0400
-+++ b/src/driver/Makefile.in	2013-04-03 19:12:53.000000000 +0400
+--- a/src/driver/Makefile.in	2013-05-09 20:02:37.000000000 +0400
++++ b/src/driver/Makefile.in	2013-05-09 20:02:43.000000000 +0400
 @@ -70,7 +70,7 @@
  main.lo: open-axiom.h
  

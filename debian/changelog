@@ -1,6 +1,9 @@
-open-axiom (1.5.0~svn2797-1) UNRELEASED; urgency=low
+open-axiom (1.5.0~svn2823-1) UNRELEASED; urgency=low
 
   * New upstream version.
+  * Use xz compression for both source tarball and packages
+  * Require g++ >= 4.7 for C++11
+  * Refreshed patches
 
  -- Igor Pashev <pashev.igor@gmail.com>  Wed, 03 Apr 2013 16:56:48 +0400
 
