@@ -1,11 +1,15 @@
-open-axiom (1.5.0~svn2823-1) UNRELEASED; urgency=low
+open-axiom (1.5.0~svn2965-1) UNRELEASED; urgency=low
 
   * New upstream version.
   * Use xz compression for both source tarball and packages
   * Require g++ >= 4.7 for C++11
   * Refreshed patches
+  * touch aclocal.m4 -r configure.ac to avoid rebuilding aclocal.m4 which
+    requires aclocal 1.13
+  * Do not patch configure.ac, but override variables in Makefiles (due to
+    automake 1.13 too)
 
- -- Igor Pashev <pashev.igor@gmail.com>  Wed, 03 Apr 2013 16:56:48 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Wed, 29 May 2013 19:13:11 +0400
 
 open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
 

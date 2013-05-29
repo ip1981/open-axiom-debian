@@ -17,6 +17,7 @@ else
 LISP := gcl
 endif
 
+oa_libdir := /usr/lib/open-axiom
 
 PACKAGE      := open-axiom
 SVN_REPO     := svn://svn.code.sf.net/p/open-axiom/code/trunk
@@ -44,6 +45,8 @@ debian/open-axiom.1: build-stamp
 # --disable-gcl is for included GCL:
 configure-stamp:
 	dh_testdir
+	# aclocal.m4 is older than configure; rebuilding aclocal.m4 requires aclocal-1.13
+	touch aclocal.m4 -r configure.ac
 	dh_auto_configure -B $(BUILD) -- \
 		--with-lisp=$(LISP) \
 		--with-x \
@@ -56,7 +59,8 @@ build-arch: build-stamp
 build-indep: build-stamp
 build-stamp: configure-stamp
 	dh_testdir
-	cd $(BUILD) && $(MAKE)
+	cd $(BUILD) && $(MAKE) \
+		open_axiom_installdir=$(oa_libdir)
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	cd $(BUILD) && $(MAKE) check
 endif
@@ -67,7 +71,8 @@ install-stamp: build-stamp
 	dh_testdir
 	dh_testroot
 	dh_prep
-	dh_auto_install -B $(BUILD)
+	dh_auto_install -B $(BUILD) -- \
+		oa_installdir=$(oa_libdir)
 	touch $@
 
 binary: binary-arch binary-indep
@@ -76,6 +81,7 @@ binary-arch: install debian/open-axiom.1
 ifeq ($(LISP), sbcl)
 	dh_install -p open-axiom  usr/lib/open-axiom/lib/libopen-axiom-core.so
 	dh_install -p open-axiom  usr/lib/open-axiom/algebra/*.fasl
+	dh_install -p open-axiom  usr/lib/open-axiom/interp/*.fasl
 	# Remove shebangs and "compiled from ..." lines.
 	# This makes lintian happy and prevents disclosure
 	# of paths on build machine. E. g.:
