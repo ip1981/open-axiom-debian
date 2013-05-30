@@ -91,7 +91,11 @@ ifeq ($(LISP), sbcl)
 	#   using SBCL version 1.0.50.0.debian
 	find debian/open-axiom -type f -name \*.fasl -exec \
 		sed -i '/^#!/ d; /compiled/ d' {} \;
-else
+else ifeq ($(LISP), clisp)
+	dh_install -p open-axiom  usr/lib/open-axiom/lib/libopen-axiom-core.so
+	dh_install -p open-axiom  usr/lib/open-axiom/algebra/*.fas
+	dh_install -p open-axiom  usr/lib/open-axiom/interp/*.fas
+else ifeq ($(LISP), gcl)
 	dh_install -p open-axiom  usr/lib/open-axiom/algebra/*.o
 endif
 	dh_install
