@@ -4,11 +4,7 @@ Priority: optional
 Maintainer: Igor Pashev <pashev.igor@gmail.com>
 Build-Depends:
  debhelper ( >= 8 ),
- sbcl ( >= 1:1.0.30 ) [ i386  amd64  kfreebsd-amd64],
- gcl ( >= 2.6.7 )     [!i386 !amd64 !kfreebsd-amd64],
- libreadline-dev      [!i386 !amd64 !kfreebsd-amd64],
- libncurses5-dev      [!i386 !amd64 !kfreebsd-amd64],
- libgmp-dev           [!i386 !amd64 !kfreebsd-amd64],
+ sbcl ( >= 1:1.0.30 ),
  libxpm-dev,
  libxt-dev,
  g++ (>= 4.7),

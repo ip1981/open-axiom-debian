@@ -1,4 +1,4 @@
-open-axiom (1.5.0~svn3038-1) UNRELEASED; urgency=low
+open-axiom (1.5.0~svn3038-1) unstable; urgency=low
 
   * New upstream version.
   * Use xz compression for both source tarball and packages
@@ -8,8 +8,9 @@ open-axiom (1.5.0~svn3038-1) UNRELEASED; urgency=low
     requires aclocal 1.13
   * Do not patch configure.ac, but override variables in Makefiles (due to
     automake 1.13 too)
+  * Only support SBCL, all other lisps cause FTBFS.
 
- -- Igor Pashev <pashev.igor@gmail.com>  Wed, 29 May 2013 19:13:11 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Wed, 26 Jun 2013 23:59:10 +0400
 
 open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
 
