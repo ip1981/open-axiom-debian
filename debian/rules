@@ -2,6 +2,8 @@
 
 include /usr/share/dpkg/architecture.mk
 
+export DH_VERBOSE = 1
+
 # make clean does not clean properly, so building out of source
 BUILD = $(CURDIR)/build-tree
 
@@ -16,6 +18,9 @@ LISP := sbcl
 else
 LISP := gcl
 endif
+
+# For experiments only:
+#LISP := ecl
 
 oa_libdir := /usr/lib/open-axiom
 
@@ -46,7 +51,7 @@ debian/open-axiom.1: build-stamp
 configure-stamp:
 	dh_testdir
 	# aclocal.m4 is older than configure; rebuilding aclocal.m4 requires aclocal-1.13
-	touch aclocal.m4 -r configure.ac
+	touch aclocal.m4 config/*.m4 -r configure.ac
 	dh_auto_configure -B $(BUILD) -- \
 		--with-lisp=$(LISP) \
 		--with-x \
