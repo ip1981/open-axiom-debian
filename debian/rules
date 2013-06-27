@@ -12,7 +12,15 @@ BUILD = $(CURDIR)/build-tree
 
 LDFLAGS += -Wl,--as-needed
 
+# List of archs currently having SBCL
+# Keep build-deb on sbcl in one line: sbcl (...) [...],
+HAVE_SBCL := $(shell grep sbcl debian/control | sed -r 's,.*\[(.+)\].*,\1,')
+
+ifneq (,$(filter $(DEB_HOST_ARCH),$(HAVE_SBCL)))
 LISP := sbcl
+else
+LISP := clisp
+endif
 
 oa_libdir := /usr/lib/open-axiom
 

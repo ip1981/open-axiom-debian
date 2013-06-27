@@ -1,4 +1,4 @@
-open-axiom (1.5.0~svn3038-1) unstable; urgency=low
+open-axiom (1.5.0~svn3039-1) unstable; urgency=low
 
   * New upstream version.
   * Use xz compression for both source tarball and packages
@@ -8,11 +8,11 @@ open-axiom (1.5.0~svn3038-1) unstable; urgency=low
     requires aclocal 1.13
   * Do not patch configure.ac, but override variables in Makefiles (due to
     automake 1.13 too)
-  * Only support SBCL, all other lisps cause FTBFS.
+  * Use Clisp if SBCL is not available (currently !i386 !amd64 !kfreebsd-amd64)
   * Enable hardening (include /usr/share/dpkg/buildflags.mk for build flags)
   * Use dh-buildinfo
 
- -- Igor Pashev <pashev.igor@gmail.com>  Thu, 27 Jun 2013 12:05:47 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Fri, 28 Jun 2013 01:40:28 +0400
 
 open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
 
