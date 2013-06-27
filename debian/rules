@@ -44,6 +44,7 @@ configure-stamp:
 	dh_testdir
 	# aclocal.m4 is older than configure; rebuilding aclocal.m4 requires aclocal-1.13
 	touch aclocal.m4 config/*.m4 -r configure.ac
+	$(LISP) --version </dev/null || true
 	dh_auto_configure -B $(BUILD) -- \
 		--with-lisp=$(LISP) \
 		--with-x \
