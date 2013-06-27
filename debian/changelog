@@ -10,8 +10,9 @@ open-axiom (1.5.0~svn3038-1) unstable; urgency=low
     automake 1.13 too)
   * Only support SBCL, all other lisps cause FTBFS.
   * Enable hardening (include /usr/share/dpkg/buildflags.mk for build flags)
+  * Use dh-buildinfo
 
- -- Igor Pashev <pashev.igor@gmail.com>  Thu, 27 Jun 2013 02:05:01 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Thu, 27 Jun 2013 12:05:47 +0400
 
 open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
 
