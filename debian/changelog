@@ -11,8 +11,9 @@ open-axiom (1.5.0~svn3056-1) unstable; urgency=low
   * Use Clisp if SBCL is not available (currently !i386 !amd64 !kfreebsd-amd64)
   * Enable hardening (include /usr/share/dpkg/buildflags.mk for build flags)
   * Use dh-buildinfo
+  * Override hardening-no-relro on usr/lib/open-axiom/bin/AXIOMsys
 
- -- Igor Pashev <pashev.igor@gmail.com>  Sun, 01 Sep 2013 23:49:01 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Mon, 02 Sep 2013 00:23:30 +0400
 
 open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
 

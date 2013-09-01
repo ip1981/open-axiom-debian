@@ -1,0 +1,9 @@
+# AXIOMsys is built by open-axiom driver:
+# ../../src/driver/open-axiom --execpath=../../x86_64-pc-linux-gnu/bin/bootsys \
+#        --syslib=../../x86_64-pc-linux-gnu/lib \
+#        --system="../../x86_64-pc-linux-gnu/" \
+#        --sysalg="../../x86_64-pc-linux-gnu/algebra/" \
+#        --prologue="(pushnew :open-axiom-algebra-system *features*)" \
+#        --make --output=../../x86_64-pc-linux-gnu/bin/AXIOMsys --main="BOOT::|systemMain|" \
+#        --load-directory=. boot-pkg.fasl ...
+open-axiom: hardening-no-relro usr/lib/open-axiom/bin/AXIOMsys
