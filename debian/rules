@@ -123,8 +123,8 @@ endif
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
-	dh_md5sums
 	dh_buildinfo
+	dh_md5sums
 	dh_builddeb -- -Zxz
 
 clean:
@@ -132,5 +132,6 @@ clean:
 	dh_testroot
 	rm -rf $(BUILD)
 	rm -f install-stamp build-stamp configure-stamp
+	rm -rf .pc
 	dh_clean
 
