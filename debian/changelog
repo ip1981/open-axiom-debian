@@ -1,4 +1,4 @@
-open-axiom (1.5.0~svn3039-1) unstable; urgency=low
+open-axiom (1.5.0~svn3056-1) unstable; urgency=low
 
   * New upstream version.
   * Use xz compression for both source tarball and packages

@@ -1,8 +1,8 @@
-Index: b/src/sman/sman.c
+Index: open-axiom/src/sman/sman.c
 ===================================================================
---- a/src/sman/sman.c	2013-05-09 20:02:37.000000000 +0400
-+++ b/src/sman/sman.c	2013-05-09 20:02:43.000000000 +0400
-@@ -450,7 +450,6 @@
+--- open-axiom.orig/src/sman/sman.c	2013-09-01 11:22:27.000000000 +0400
++++ open-axiom/src/sman/sman.c	2013-09-01 11:22:27.000000000 +0400
+@@ -449,7 +449,6 @@
    const char* command = oa_concatenate_string(root_dir,HypertexProgram);
  
    if (readablep(command) != 1) {
@@ -10,7 +10,7 @@ Index: b/src/sman/sman.c
      return;
    } 
    if (PasteFile){
-@@ -480,8 +479,6 @@
+@@ -479,8 +478,6 @@
  
    if (readablep(command) == 1)
      spawn_of_hell(command, DoItAgain);
