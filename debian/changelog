@@ -13,10 +13,11 @@ open-axiom (1.5.0~svn3056-1) unstable; urgency=low
   * Use dh-buildinfo
   * Override hardening-no-relro on usr/lib/open-axiom/bin/AXIOMsys
   * Build depends on autotools-dev to update config.*
-  * Fixed get-orig-source target to work out of source tree.
+  * Fixed get-orig-source target to work out of source tree
+  * Use canonical VCS fields
   * Bump standards version 3.9.3 → 3.9.4, no changes
 
- -- Igor Pashev <pashev.igor@gmail.com>  Thu, 31 Oct 2013 16:56:08 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Thu, 31 Oct 2013 17:01:08 +0400
 
 open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
 
