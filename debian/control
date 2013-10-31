@@ -4,14 +4,14 @@ Priority: optional
 Maintainer: Igor Pashev <pashev.igor@gmail.com>
 Build-Depends:
  debhelper ( >= 8 ),
- sbcl ( >= 1:1.0.30 ) [i386 amd64 kfreebsd-amd64],
- clisp ( >= 1:2.44 ) [!i386 !amd64 !kfreebsd-amd64],
+ sbcl ( >= 1:1.0.30 ),
  libxpm-dev,
  libxt-dev,
  g++ (>= 4.7),
  help2man,
  dh-buildinfo,
-Standards-Version: 3.9.3
+ autotools-dev,
+Standards-Version: 3.9.4
 Vcs-Git: http://git.debian.org/git/pkg-open-axiom/pkg-open-axiom.git
 Vcs-Browser: http://git.debian.org/?p=pkg-open-axiom/pkg-open-axiom.git
 Homepage: http://www.open-axiom.org/

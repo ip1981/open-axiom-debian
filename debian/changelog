@@ -8,12 +8,14 @@ open-axiom (1.5.0~svn3056-1) unstable; urgency=low
     requires aclocal 1.13
   * Do not patch configure.ac, but override variables in Makefiles (due to
     automake 1.13 too)
-  * Use Clisp if SBCL is not available (currently !i386 !amd64 !kfreebsd-amd64)
+  * Require SBCL
   * Enable hardening (include /usr/share/dpkg/buildflags.mk for build flags)
   * Use dh-buildinfo
   * Override hardening-no-relro on usr/lib/open-axiom/bin/AXIOMsys
+  * Build depends on autotools-dev to update config.*
+  * Bump standards version 3.9.3 → 3.9.4, no changes
 
- -- Igor Pashev <pashev.igor@gmail.com>  Mon, 02 Sep 2013 00:23:30 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Sat, 26 Oct 2013 16:47:53 +0400
 
 open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
 

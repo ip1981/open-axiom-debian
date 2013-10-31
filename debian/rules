@@ -11,16 +11,7 @@ export DH_VERBOSE = 1
 BUILD = $(CURDIR)/build-tree
 
 LDFLAGS += -Wl,--as-needed
-
-# List of archs currently having SBCL
-# Keep build-deb on sbcl in one line: sbcl (...) [...],
-HAVE_SBCL := $(shell grep sbcl debian/control | sed -r 's,.*\[(.+)\].*,\1,')
-
-ifneq (,$(filter $(DEB_HOST_ARCH),$(HAVE_SBCL)))
 LISP := sbcl
-else
-LISP := clisp
-endif
 
 oa_libdir := /usr/lib/open-axiom
 
@@ -50,6 +41,7 @@ debian/open-axiom.1: build-stamp
 # --disable-gcl is for included GCL:
 configure-stamp:
 	dh_testdir
+	dh_autotools-dev_updateconfig
 	# aclocal.m4 is older than configure; rebuilding aclocal.m4 requires aclocal-1.13
 	touch aclocal.m4 config/*.m4 -r configure.ac
 	$(LISP) --version </dev/null || true
@@ -132,7 +124,6 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -rf $(BUILD)
-	rm -f install-stamp build-stamp configure-stamp
-	rm -rf .pc
+	dh_autotools-dev_restoreconfig
 	dh_clean
 
