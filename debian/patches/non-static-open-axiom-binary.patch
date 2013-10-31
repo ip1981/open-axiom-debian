@@ -1,3 +1,6 @@
+Description: make /usr/bin/open-axiom a dynamically linked executable
+Origin: vendor
+Forwarded: no
 Index: b/src/driver/Makefile.in
 ===================================================================
 --- a/src/driver/Makefile.in	2013-05-09 20:02:37.000000000 +0400

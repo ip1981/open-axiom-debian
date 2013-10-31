@@ -1,3 +1,7 @@
+Description: suppress "program not found" messages.  This programs are
+ in separated packages, and open-axiom recommends them.
+Forwarded: not-needed
+Origin: vendor
 Index: open-axiom/src/sman/sman.c
 ===================================================================
 --- open-axiom.orig/src/sman/sman.c	2013-09-01 11:22:27.000000000 +0400
