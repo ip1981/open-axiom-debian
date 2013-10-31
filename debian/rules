@@ -17,7 +17,8 @@ oa_libdir := /usr/lib/open-axiom
 
 PACKAGE      := open-axiom
 SVN_REPO     := svn://svn.code.sf.net/p/open-axiom/code/trunk
-SRC_VERSION  := $(shell dpkg-parsechangelog | awk '/^Version:/ {sub(/-[^-]*/, "", $$2); print $$2}')
+DEBIAN_PATH  := $(abspath $(dir $(firstword $(MAKEFILE_LIST))))
+SRC_VERSION  := $(shell dpkg-parsechangelog -l$(DEBIAN_PATH)/changelog | awk '/^Version:/ {sub(/-[^-]*/, "", $$2); print $$2}')
 SVN_REVISION := $(shell echo $(SRC_VERSION) | sed -r 's,.+svn([0-9]+),\1,')
 TARBALL      := $(PACKAGE)_$(SRC_VERSION).orig.tar.xz
 .PHONY: get-orig-source
