@@ -7,4 +7,6 @@ Exec=open-axiom
 TryExec=open-axiom
 Icon=open-axiom
 Categories=Science;Education;Math;
+Keywords=Mathematics;Computer algebra system;Research;Teaching;
+Keywords[ru]=Математика;Система компьютерной алгебры;Научная работа;Обучение;
 Terminal=true
