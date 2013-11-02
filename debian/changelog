@@ -1,4 +1,4 @@
-open-axiom (1.5.0~svn3056-1) unstable; urgency=low
+open-axiom (1.5.0~svn3056+ds-1) unstable; urgency=low
 
   * New upstream version.
   * Use xz compression for both source tarball and packages
@@ -20,9 +20,12 @@ open-axiom (1.5.0~svn3056-1) unstable; urgency=low
     no-missing-messages.patch
   * Updated d/copyright
   * Updated d/watch to use SourceForge SVN repository
+  * Omit contrib directory (that's why +ds):
+    - Unclear licenses (GPL, but which one?)
+    - It is for Windows
   * Bump standards version 3.9.3 → 3.9.4, no changes
 
- -- Igor Pashev <pashev.igor@gmail.com>  Sat, 02 Nov 2013 21:50:44 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Sat, 02 Nov 2013 22:31:42 +0400
 
 open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
 

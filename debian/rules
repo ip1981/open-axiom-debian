@@ -19,7 +19,7 @@ PACKAGE      := open-axiom
 SVN_REPO     := svn://svn.code.sf.net/p/open-axiom/code/trunk
 DEBIAN_PATH  := $(abspath $(dir $(firstword $(MAKEFILE_LIST))))
 SRC_VERSION  := $(shell dpkg-parsechangelog -l$(DEBIAN_PATH)/changelog | awk '/^Version:/ {sub(/-[^-]*/, "", $$2); print $$2}')
-SVN_REVISION := $(shell echo $(SRC_VERSION) | sed -r 's,.+svn([0-9]+),\1,')
+SVN_REVISION := $(shell echo $(SRC_VERSION) | sed -r 's,.+svn([0-9]+).*,\1,')
 TARBALL      := $(PACKAGE)_$(SRC_VERSION).orig.tar.xz
 .PHONY: get-orig-source
 get-orig-source:
@@ -28,6 +28,7 @@ get-orig-source:
 	svn export -r $(SVN_REVISION) $(SVN_REPO) \
 	get-orig-source/$(PACKAGE)-$(SRC_VERSION)
 	 tar cJf $(TARBALL) -C get-orig-source \
+		 --exclude=contrib \
 		 $(PACKAGE)-$(SRC_VERSION)
 	@rm -rf get-orig-source
 	@echo "  "$(TARBALL)" created; move it to the right destination to build the package"
