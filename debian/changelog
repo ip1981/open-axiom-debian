@@ -19,9 +19,10 @@ open-axiom (1.5.0~svn3056-1) unstable; urgency=low
   * Added description to non-static-open-axiom-binary.patch and
     no-missing-messages.patch
   * Updated d/copyright
+  * Updated d/watch to use SourceForge SVN repository
   * Bump standards version 3.9.3 → 3.9.4, no changes
 
- -- Igor Pashev <pashev.igor@gmail.com>  Sat, 02 Nov 2013 21:32:54 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Sat, 02 Nov 2013 21:50:44 +0400
 
 open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
 
