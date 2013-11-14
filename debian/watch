@@ -1,4 +1,4 @@
 version=3
-opts=dversionmangle=s/.*svn.(\d+)(.ds.*)?/$1/ \
+opts=dversionmangle=s/.*svn(\d+)(.ds.*)?/$1/ \
   http://sourceforge.net/p/open-axiom/code/HEAD/tree/trunk/ \
     /p/open-axiom/code/(\d+)/
