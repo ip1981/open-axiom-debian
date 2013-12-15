@@ -18,14 +18,14 @@ open-axiom (1.5.0~svn3056+ds-1) unstable; urgency=low
   * Added keywords to d/open-axiom.desktop
   * Added description to non-static-open-axiom-binary.patch and
     no-missing-messages.patch
-  * Updated d/copyright
+  * Updated d/copyright (thanks to Boris Pek)
   * Updated d/watch to use SourceForge SVN repository
   * Omit contrib directory (that's why +ds):
     - Unclear licenses (GPL, but which one?)
     - It is for Windows
   * Bump standards version 3.9.3 → 3.9.4, no changes
 
- -- Igor Pashev <pashev.igor@gmail.com>  Sat, 02 Nov 2013 22:31:42 +0400
+ -- Igor Pashev <pashev.igor@gmail.com>  Sun, 15 Dec 2013 12:11:38 +0400
 
 open-axiom (1.4.1+svn~2626-2) unstable; urgency=low
 
